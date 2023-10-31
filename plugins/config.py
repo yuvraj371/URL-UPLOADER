@@ -60,3 +60,5 @@ class Config(object):
     PRO_USERS = list(set(int(x) for x in os.environ.get("PRO_USERS", "0").split()))
 
     PRO_USERS.append(OWNER_ID)
+
+    DATABASE_NAME = os.environ.get("database_name", " autodeletebot")
