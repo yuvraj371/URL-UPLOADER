@@ -1,7 +1,5 @@
-
 import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 import os
@@ -11,8 +9,9 @@ from pyrogram import Client as Ntbot
 from pyrogram import filters
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+db = Database(Config.DATABASE_URL, Config.DATABASE_NAME)
 
-if __name__ == "__main__" :
+if __name__ == "__main__":
     # create download directory, if not exist
     if not os.path.isdir(Config.DOWNLOAD_LOCATION):
         os.makedirs(Config.DOWNLOAD_LOCATION)
