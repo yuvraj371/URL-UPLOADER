@@ -62,3 +62,5 @@ class Config(object):
     PRO_USERS.append(OWNER_ID)
 
     DATABASE_NAME = os.environ.get("database_name", " autodeletebot")
+
+    PORT = os.environ.get ("PORT", '8112')
