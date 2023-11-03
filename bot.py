@@ -4,6 +4,7 @@ logger = logging.getLogger(__name__)
 
 import os
 from plugins.config import Config
+from plugins.database.database import Database  # Import the Database class
 
 from pyrogram import Client as Ntbot
 from pyrogram import filters
@@ -23,3 +24,4 @@ if __name__ == "__main__":
         api_hash=Config.API_HASH,
         plugins=plugins)
     Ntbot.run()
+    
